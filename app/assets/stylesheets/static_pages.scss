@@ -1,3 +1,75 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.f-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.f-container1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.f-container2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.f-item1 {
+
+  width: 50%;
+  border-color: gray;
+  margin-right: 15px;
+  padding: 8px 0 0 8px;
+  height:300px;
+  border-radius: 10px;
+  border: 1px solid;
+}
+
+.f-item2 {
+  width: 50%;
+  border-color: gray;
+  margin-right: 15px;
+  padding: 8px 0 0 8px;
+  height:300px;
+  border-radius: 10px;
+  border: 1px solid;
+}
+
+.f-item3 {
+  width: 100%;
+  border-color: gray;
+  margin-right: 15px;
+  padding: 8px 0 0 8px;
+  height: 200px;
+  border-radius: 10px;
+  border: 1px solid;
+}
+
+.f-item4 {
+  width: 100%;
+  border-color: gray;
+  margin-right: 15px;
+  padding: 8px 0 0 8px;
+  height: 200px;
+  border-radius: 10px;
+  border: 1px solid;
+}
+
+.f-item5 {
+  width: 100%;
+  border-color: gray;
+  margin-right: 15px;
+  padding: 8px 0 0 8px;
+  height: 200px;
+  border-radius: 10px;
+  border: 1px solid;
+}
