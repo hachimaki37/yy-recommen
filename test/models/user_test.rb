@@ -17,7 +17,7 @@ class UserTest < ActiveSupport::TestCase
 
   test "email属性が無効化どうかをテストする" do
   @user.email = ""
-  assert_not @user.valid?    
+  assert_not @user.valid?
   end
 
   test "name属性の文字数を25を上限する" do
@@ -38,7 +38,7 @@ class UserTest < ActiveSupport::TestCase
       assert @user.valid?, "#{valid_address.inspect} should be valid" #エラーメッセージ
     end
   end
-  
+
   test "無効なemailを制御すること" do
     invalid_addresses = %w( user@example,com user_at_foo.org user.name@example.
                             foo@bar_baz.com foo@bar+baz.com foo@bar..com )
@@ -70,5 +70,9 @@ class UserTest < ActiveSupport::TestCase
   test "emailが最小文字数にならないこと" do
     @user.password = @user.password_confirmation = "a" * 5
     assert_not @user.valid?
+  end
+
+  test "ダイジェストが存在しない場合" do
+    assert_not @user.authenticated?('')
   end
 end
