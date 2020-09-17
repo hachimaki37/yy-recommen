@@ -1,49 +1,75 @@
-<%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js" %>
+<div class="head-container">
+  <%= image_tag 'toppage.jpg' %>
+    <p>rekomen app</p>
+</div>
 
-<div class="swiper-container">
-  <div class="swiper-wrapper">
-    <div class="swiper-slide"><%= image_tag 'menu2.jpg', :size =>'370x250'%></div>
-    <div class="swiper-slide"><%= image_tag 'menu3.jpg',:size =>'370x250'%></div>
-    <div class="swiper-slide"><%= image_tag 'menu4.jpg', :size =>'350x250'%></div>
+<div class="heading-container">
+  <h2>こんなことでお悩みはないですか？</h2>
+
+<div class="main-container">
+  <div class="main-img">
+    <div class = "main-item"><%= image_tag 'diet.jpg', size: '320x240' %>
+      <p>野菜中心の<br>ダイエットweekにしたい！</p>
+    </div>
+    <div class = "main-item"><%= image_tag 'sports.jpg', size: '320x240' %>
+      <p>タンパク質中心の<br>体引き締めweekしたい！</p>
+    </div>
+    <div class = "main-item"><%= image_tag 'meal_with_friends.jpg', size: '320x240' %>
+      <p>オシャレで映える<br>食事weekにしたい！</p>
+    </div>
   </div>
-  <div class="swiper-pagination"></div>
 </div>
 
-<div class="header-container">
-  <h2>
-    あなたのおすすめメニューを投稿する
+<div class="desc-container">
+  <p>
+    今週はこんなシーンに合わせたWeek Menuにしたい♪
     <br>
-    <%= link_to "投稿", signup_path, class: "btn btn-lg btn-primary" %>
-  </h2>
+    <br>
+    でも張り切って妄想したのも束の間、
+    <br>
+    1週間の献立作りがめんどくさい。。1週間も何作ればいいの。。今月はどんなメニュー作ったっけ。。
+    <br>
+    実際はこんな現実が待ち受けております。
+    <br>
+    <br>
+    そんな現実に打ち勝ち、理想的な1週間を過ごすために、
+    <br>
+    みなさんの体験とアイデアから、あなたの理想のシーンに合わせて
+    <br>
+    Week Menuをレコメンドします！
+  </p>
 </div>
 
-<div class="f-container"></div>
-  <div class ="f-item1">今週のレコメンドメニュー!</div>
+<div class="detail-container">
+  <div class="summary-container">
+    <h1>
+      &#10004 rekomen appを使って
+      <br>
+      あなた好みのWeek Menuを作ろう！
+      <br>
+      <br>
+    </h1>
+    <p>
+      使い方は簡単！登録後、あなた好みのシーンを選択するだけ！
+      <br>
+      あなたの体験とアイデアが、みなさんの素敵な1週間を作ります。
+      <br>
+      理想のWeek Menuを作り、素敵な1週間を過ごしましょう！
+    </p>
+  </div>
+  <span class="action-container">
+     <%= link_to "ログイン", login_path, class: "btn btn-lg btn-primary btn-login" %>
+     <br>
+     <%= link_to "新規登録", signup_path, class: "btn btn-lg btn-primary btn-signup" %>
+  </span>
 </div>
-<div class="f-container1">
-  <div class ="f-item2">こんな時のレコメンドメニュ</div>
-  <div class = "f-item3">みんなが選ぶ人気メインメニュー！</div>
 
+<div class="btn-sns">
+  <ul class="snsbtniti">
+    <li><a href="https://twitter.com/hachimaki37" class="flowbtn fl_tw"><i class="fab fa-twitter"></i><div>Twitter</div></a></li>
+    <li><a href="https://www.sejuku.net/blog/105961" class="flowbtn insta_btn"><i class="fab fa-instagram"></i><div>Instagram</div></a></li>
+    <li><a href="https://www.sejuku.net/blog/105961" class="flowbtn fl_fb"><i class="fab fa-facebook-f"></i><div>Facebook</div></a></li>
+    <li><a href="https://www.sejuku.net/blog/105961" class="flowbtn fl_hb"><i class="fas fa-bold"></i><div>Hatena</div></a></li>
+    <li><a href="https://www.sejuku.net/blog/105961" class="flowbtn fl_ma"><i class="far fa-envelope"></i><div>Contact</div></a></li>
+  </ul>
 </div>
-
-<div class="f-container2">
-  <div class ="f-item4">コース別一覧</div>
-
-</div>
-
-<script>
-  let swipeOption = {
-    autoplay: {
-		delay: 3000,
-		stopOnLastSlide: false,
-		disableOnInteraction: false,
-		reverseDirection: false
-	  },
-    pagination: {
-		  el: '.swiper-pagination',
-		  type: 'bullets',
-		  clickable: true
-    }
-  }
-  new Swiper('.swiper-container', swipeOption);
-</script>
