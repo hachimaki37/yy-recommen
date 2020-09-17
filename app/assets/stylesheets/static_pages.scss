@@ -1,126 +1,210 @@
-// Place all the styles related to the StaticPages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.head-container {
+  position: relative;
+  width: 100%;
+}
 
-.swiper-container {
+.head-container img {
+  width: 100%;
+}
+
+.head-container p {
+  position: absolute;
+  top: 30%;
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 90px;
+  left: 24%;
+  font-weight: bold;
+  padding: 42px;
+  color: #FF6347;
+}
+
+.heading-container {
   width: 100%;
   height: 100%;
-  text-align: center;
+}
+
+.heading-container h2 {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin: 40px;
+}
+
+.main-container {
+  width: 100%;
+}
+
+.main-img {
+  display: flex;
+  justify-content: center;
+}
+
+.main-item {
+  margin: 0 40px 40px 40px;
   border-radius: 10px;
+  box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.2);
+}
+
+.main-item p {
+ font-size: 18px;
+ text-align: center;
+ padding-top: 10px;
+ color: #FF6347;
+ font-weight: bold;
+ font-family: 'Poppins', sans-serif;
+}
+
+.desc-container {
+  width: 100%;
+  height: 300px;
+  padding-top: 2px;
+}
+
+.desc-container p  {
+  padding-left: 3%;
+  padding-top: 1%;
+  color: #777777;
+  font-family: 'Poppins', sans-serif;
+  font-size:  1.5em;
+}
+
+.detail-container {
+  width: 100%;
+  background: radial-gradient(#F2B9A1, #FFE4C4) fixed;
+  box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.1);
+  margin-top: 6%;
+}
+
+.summary-container {
+  height: 360px;
+  width: 60%;
+  padding: 3% 0 3% 4%;
+  color: #777777;
+  overflow: hidden;
   display: inline-block;
 }
 
-.swiper-wrapper {
-  width: 100%;
-	height: 250px;
+.summary-container h1 {
+  text-align: left;
+  font-size:  2.5em;
+  font-weight: bold;
+  line-height: 50px;
+  font-family: 'Trebuchet MS', sans-serif;
+  color: FF6347;
 }
 
-/* 全スライド共通スタイル */
-.swiper-slide {
-	color: #ffffff;
-	width: 50%;
-	height: 100%;
-	line-height:250px;
+.action-container {
+  width: 39%;
+  height: 360px;
+  color: #777777;
+  font-family: 'Trebuchet MS', sans-serif;
+  overflow: hidden;
+  display: inline-block;
 }
 
-/* 4の倍数＋1枚目のスライドのスタイル（1枚目、5枚目…） */
-.swiper-slide:nth-child(4n+1) {
-	background-color: #FFFACD;
-}
-/* 4の倍数＋2枚目のスライドのスタイル（2枚目、6枚目…） */
-.swiper-slide:nth-child(4n+2) {
-	background-color: #F0F8FF;
-}
-/* 4の倍数＋3枚目のスライドのスタイル（3枚目、7枚目…） */
-.swiper-slide:nth-child(4n+3) {
-	background-color: #FFE4E1;
-}
-/* 4の倍数＋4枚目のスライドのスタイル（4枚目、8枚目…） */
-.swiper-slide:nth-child(4n+4) {
-	background-color: #999;
+.btn-login {
+  margin: 30% 25% 0 5%;
+  font-size: 1.5em;
+  line-height: 24px;
+  background-color: #FFFFFF;
+  border-radius: 35px;;
+  color: #777777;
+  display:block;
+  border: solid 1px #777777;
 }
 
-.header-container {
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  border-radius: 10px;
-  background-color: #F5F5F5;
+.btn-signup {
+  margin: 0% 25% 0 5%;
+  font-size: 1.5em;
+  line-height: 24px;
+  background-color: #777777;
+  border-radius: 35px;;
+  color: #FFFFFF;
+  display:block;
+  border: solid 1px #FFFFFF;
 }
 
-h2 {
-  padding: 15px;
-  font-size: 2em;
-  line-height: 40px;
+.btn-sns {
+  background: radial-gradient(#F2B9A1, #FFE4C4) fixed;
+  padding: 5px 0;
+  height: 90px;
 }
 
-.f-container {
+.snsbtniti {
+  list-style: none;
+}
+/* ボタン全体 */
+.flowbtn {
+  font-family: 'Comic Sans MS','Chalkboard SE',sans-serif;
+  border-radius: 50%;
+  position: relative;
+  display: inline-block;
+  width: 66px;
+  height: 66px;
+  font-size: 25px;
+  color: #fff!important;
+  text-decoration: none;
+  transition: .5s;
+  }
+  .flowbtn i{
+  position: relative;
+  }
+
+  /* Twitter */
+  .fl_tw {
+  background: #55acee;
+  }
+
+  /* 問い合わせ */
+  .fl_ma {
+  background: #f3981d;
+  }
+
+  /* Facebook */
+  .fl_fb {
+  background: #3b5998;
+  }
+
+  /* はてブ */
+  .fl_hb {
+  background: #1ba5dc;
+  }
+
+  /* Instagram紫グラデ背景 */
+  .insta_btn {
+  background:-webkit-linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
+  background: linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
+  overflow: hidden;
+  }
+
+  /* ボタン内のテキスト */
+  .flowbtn div {
+  font-size: 11px;
+  font-weight: bold;
+  position: relative;
+  }
+
+  /* ulタグの内側余白を０にする */
+  ul.snsbtniti {
+  padding: 0 20%!important;
+  }
+
+  /* ボタン全体の位置 */
+  .snsbtniti {
   display: flex;
-  justify-content: center;
-  align-items: center;
-}
+  flex-flow: row wrap;
+  justify-content: space-around;
+  }
 
-.f-container1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-}
+  /* ボタン同士の余白 */
+  .snsbtniti li {
+  text-align: center!important;
+  padding-top: 5px;
+  }
 
-.f-container2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.f-item1 {
-  width: 100%;
-  border-color: gray;
-  margin-right: 15px;
-  padding: 8px 0 0 8px;
-  height: 300px;
-  border-radius: 10px;
-  border: 1px solid;
-}
-
-.f-item2 {
-  width: 50%;
-  border-color: gray;
-  margin-right: 15px;
-  padding: 8px 0 0 8px;
-  height: 300px;
-  border-radius: 10px;
-  border: 1px solid;
-}
-
-.f-item3 {
-  width: 50%;
-  border-color: gray;
-  margin-right: 15px;
-  padding: 8px 0 0 8px;
-  height: 300px;
-  border-radius: 10px;
-  border: 1px solid;
-}
-
-.f-item4 {
-  width: 100%;
-  border-color: gray;
-  margin-right: 15px;
-  padding: 8px 0 0 8px;
-  height: 200px;
-  border-radius: 10px;
-  border: 1px solid;
-}
-
-.f-item5 {
-  width: 100%;
-  border-color: gray;
-  margin-right: 15px;
-  padding: 8px 0 0 8px;
-  height: 200px;
-  border-radius: 10px;
-  border: 1px solid;
-}
+  /* ボタンにマウスホバー時 */
+  .flowbtn:hover {
+  -webkit-transform: translateY(-5px);
+  -ms-transform: translateY(-5px);
+  transform: translateY(-5px);
+  text-decoration: none;
+  }
