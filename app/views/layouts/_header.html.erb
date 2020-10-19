@@ -3,10 +3,9 @@
     <%= link_to "Rekomen App", root_path, id: "logo", style: "text-transform: lowercase; font-family: 'Trebuchet MS', sans-serif;" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "トップページ", root_path, style: 'color: #fff;' %></li>
-        <li><%= link_to "新規登録", signup_path, style: 'color: #fff' %></li>
         <% if logged_in? %>
-          <li><%= link_to "Users", '#' %></li>
+        <li><%= link_to "投稿一覧", menus_path, style: 'color: #fff;' %></li>
+          <li><%= link_to "マイページ", current_user, style: 'color: #fff;' %></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               Account <b class="caret"></b>
@@ -21,6 +20,7 @@
             </ul>
           </li>
         <% else %>
+         <li><%= link_to "新規登録", signup_path, style: 'color: #fff' %></li>
           <li><%= link_to "ログイン", login_path, style: 'color: #fff' %></li>
         <% end %>
       </ul>
