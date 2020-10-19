@@ -4,6 +4,4 @@ cache:
   directories: vendor/bundle
 rvm:
   - 2.6.4
-env:
-  matrix:
-    - TEST_TARGET=spec
+script: bundle exec rake spec
