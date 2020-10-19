@@ -7,5 +7,3 @@ rvm:
 env:
   matrix:
     - TEST_TARGET=spec
-script:
-  - "bundle exec rake $TEST_TARGET"
