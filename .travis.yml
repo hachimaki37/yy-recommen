@@ -1,5 +1,12 @@
 language: ruby
-bundler_args: --deployment
-cache: bundler
+install: bundle install --deployment
+cache:
+  directories: vendor/bundle
 rvm:
   - 2.6.4
+env:
+  matrix:
+    - TEST_TARGET=spec
+    - TEST_TARGET=cucumber
+script:
+  - "bundle exec rake $TEST_TARGET"
