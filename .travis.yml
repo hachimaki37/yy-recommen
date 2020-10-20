@@ -7,8 +7,7 @@ env:
 sudo: false
 service:
   - mysql
-before_install:
-  - gem install bundler -v 2.0.2
-script: ./script/ci/run_on_travis.sh
+install: bundle install --deployment
 cache:
-  - bundler
+  directories: vendor/bundle
+script: bundle exec rake spec
