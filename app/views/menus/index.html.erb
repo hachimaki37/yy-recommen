@@ -1,0 +1,31 @@
+<div class= "d-flex align-items-center">
+  <h1>みんなのおすすめ！</h1>
+</div>
+
+<div class= "ml-auto buttom">
+    <a class= "btn btn-outline-info" href= "/menus/new" role="button">オススメを投稿する</a>
+</div>
+
+<table class= "table border-primary">
+  <thead>
+    <tr>
+      <th scope= "col">メニュー名</th>
+      <th scope= "col">こんな時におすすめ</th>
+      <th scope= "col">おすすめ一言</th>
+      <th scope= "col">投稿者</th>
+      <th scope= "col">投稿日</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @menus.each do |menu| %>
+      <tr>
+        <td><%= menu.name %></td>
+        <td><%= menu.recommend_title %></td>
+        <td><%= menu.description %></td>
+        <td><%= menu.user.name %></td>
+        <td><%= menu.created_at.strftime('%Y/%m/%d %H:%M') %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= paginate @menus %>
