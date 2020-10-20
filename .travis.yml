@@ -10,4 +10,7 @@ service:
 install: bundle install --deployment
 cache:
   directories: vendor/bundle
+branches:
+  only:
+    - master
 script: bundle exec rake spec
