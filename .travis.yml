@@ -1,7 +1,14 @@
 language: ruby
 rvm:
-  - 2.6.4
-install: bundle install --deployment
+- 2.6.4
+env:
+  global:
+    secure: uaqwAPlVEs7DVszpY0VslR5BmHIUHiwIogNpmsDpGO8mkq5TaW6Q4myhTYG67eJQy4BKFOwOnQkZX2foUkQXgzsM0ObDrqLLsiSx2loiZRmfoU/cvzePUVmf2qXolhnwP0sdOCZvEPukSU+rk6I884nH/B0rfA2s78HSyMtgD29YlMJbO7lVlYcFQ7of85SFS0hs0hVF+GOsiF76McTPdhXWt4faPo9FKIuMR59RbVmZgo3Ev/nXpCobHjpgiGm6RBMcJ87EgRa5QuhdT6LXhOJsHF8zQV/N/KxwK3eS/zWyg4beF5PYtJ8tvnArl32pI0BByRrI0sJhy0xVnZBWtmHSK64JHYlBLlCMqw25R4ptBfwwNEsUnG582H6lAbM30u9T6my8DN4oVBm4npvnl6ndMTDq+rwp9PzW/MiGFgtPrCms79gzirugnisTjoP3M59zf421BE/HfNblFnbCjSykHTG89bRNgqmtOJRj+awYRvxagKq1mjdfF6QqxSNxaEeJa981CcSbJAGIvx+jHEfmTBnLu3j021vSTRoeRuNN9N7c15wWFz4C3EMQIZ4oUPEJKXUI2nsvHObrjzPPauFVJtZvgfcr+XmH2Dh9Qu8Xl1cy20WCsuN7wHNwTxitc9+/y81fqcv6u0aaTnBsYuSpfts3NH4eZ3bAxqH/Z+4=
+sudo: false
+service:
+  - mysql
+before_install:
+  - gem install bundler -v 2.0.2
+script: ./script/ci/run_on_travis.sh
 cache:
-  directories: vendor/bundle
-script: bundle exec rake spec
+  - bundler

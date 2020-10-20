@@ -1,4 +1,5 @@
 require 'rails_helper'
+driver = Selenium::WebDriver.for :firefox
 
 RSpec.describe "メニュー投稿", js: true do
   describe 'アカウント登録ユーザがおすすめメニューを投稿できること' do
@@ -41,3 +42,4 @@ RSpec.describe "メニュー投稿", js: true do
     end
   end
 end
+driver.quit
